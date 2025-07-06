@@ -1,18 +1,15 @@
 import React from 'react';
-import { Card, CardBody } from '@shadcn/ui';
 
 interface QuoteCardProps {
   text: string;
   author: string;
 }
 
-const QuoteCard: React.FC<QuoteCardProps> = ({ text, author }) => (
-  <Card className="bg-base-100 shadow-md">
-    <CardBody>
-      <p className="italic text-lg mb-2">"{text}"</p>
-      <p className="text-right font-semibold">- {author}</p>
-    </CardBody>
-  </Card>
-);
-
-export default QuoteCard;
+export default function QuoteCard({ text, author }: QuoteCardProps) {
+  return (
+    <div className="bg-white border-l-4 border-primary p-4 rounded shadow hover:scale-[1.01] transition">
+      <p className="italic text-lg text-gray-800">"{text}"</p>
+      <p className="text-right mt-2 font-semibold text-gray-700">- {author}</p>
+    </div>
+  );
+}

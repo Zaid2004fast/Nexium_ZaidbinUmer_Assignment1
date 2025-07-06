@@ -1,3 +1,4 @@
+my app.tsx looks like this:
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 
